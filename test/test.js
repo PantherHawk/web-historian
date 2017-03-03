@@ -77,6 +77,7 @@ describe('server', function() {
 });
 
 describe('archive helpers', function() {
+
   describe('#readListOfUrls', function () {
     it('should read urls from sites.txt', function (done) {
       var urlArray = ['example1.com', 'example2.com'];
@@ -151,7 +152,7 @@ describe('archive helpers', function() {
       setTimeout(function () {
         expect(fs.readdirSync(archive.paths.archivedSites)).to.deep.equal(urlArray);
         done();
-      }, 500);
+      }, 2000);
     });
   });
 });
